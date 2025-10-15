@@ -6,6 +6,12 @@
         <meta name="author" content="Feng Jiang" />
         <meta name="description" content="Homepage of Feng Jiang, PhD Student at UTA" />
         <meta name="keywords" content="Feng Jiang, PhD Student, University of Texas at Arlington" />
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.css" rel="stylesheet" />
+        <link href="css/bootstrap-responsive.css" rel="stylesheet" />
+        <link href="css/main.css" rel="stylesheet" />
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.js"></script>
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" rel="stylesheet">
         <style>
@@ -40,7 +46,6 @@
                 padding: 0 20px;
                 margin-top: 20px;
             }
-            
             #body {
                 max-width: 800px;
                 margin: 0 auto;
@@ -89,7 +94,6 @@
                 background: transparent !important;
                 box-shadow: none !important;
             }
-            
             .navbar-inverse .navbar-inner{
                 padding-bottom: -10px;
                 padding-top: -10px;
@@ -105,22 +109,21 @@
                 offset: 100
             });
 
-            $('.navbar a[href^="#"]').on('click', function(e) {
-                e.preventDefault();
-                var target = $(this.hash);
-                if (target.length) {
-                    $('html, body').animate({
-                        scrollTop: target.offset().top - 90
-                    }, 500);
-                }
-            });
-    
-            $('#back-to-top').click(function(e) {
-                e.preventDefault();
+        $('.navbar a[href^="#"]').on('click', function(e) {
+            e.preventDefault();
+            var target = $(this.hash);
+            if (target.length) {
                 $('html, body').animate({
-                    scrollTop: 0
+                    scrollTop: target.offset().top - 90
                 }, 500);
-            });
+            }
+        });
+    
+        $('#back-to-top').click(function(e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: 0
+        }, 500);});
         });
     </script>
 
@@ -136,9 +139,9 @@
                         <li class="nav-item"><a href="#research">Research</a></li>
                         <li class="nav-item"><a href="#publications">Publications</a></li>
                         <li class="nav-item"><a href="#industry">Industry</a></li>
-                        <li class="nav-item"><a href="#research_experience">Experience</a></li>
                         <li class="nav-item"><a href="#teaching">Teaching</a></li>
                         <li class="nav-item"><a href="#honors">Honors</a></li>
+                        <li class="nav-item"><a href="#research_experience">Experience</a></li>
                     </ul>
                 </div>
             </div>
@@ -215,19 +218,17 @@
             <section id="research">
             <h4>Research</h4>
             <p class="contentItem">
-            - Multimodal Foundation Models & Large Language Models for Life Sciences<br/>
-            - AI-driven Computational Biology and Bioinformatics<br/>
-            - Graph Neural Networks for Biological Data<br/>
-            - Deep AUC Maximization and Imbalanced Learning
+            - Large Foundation Models & Multimodal Large Language Models<br/>
+            - Graph Neural Networks<br/>
+            - Deep AUC Maximization<br/>
+            - Long-tailed Learning
             </p>
             <br />
             </section>
 
             <section id="publications">
             <h4>Publications</h4>
-            <p class="contentItem" style="font-size: 14px; font-style: italic; margin-bottom: 10px;">
-            10 selected publications including NeurIPS (Spotlight), ICCV, ECCV, AAAI, and journals.
-            </p>
+            <p class="contentItem"><i>10 selected publications including NeurIPS (Spotlight), ICCV, ECCV, AAAI, and journals.</i></p>
             <ol type="1">
                 <li><b>Feng Jiang</b>, Mangal Prakash, Hehuan Ma, Jianyuan Deng, Yuzhi Guo, Amina Mollaysa, Tommaso Mansi, Rui Liao and Junzhou Huang, "TRIDENT: Tri-Modal Molecular Representation Learning with Taxonomic Annotations and Local Correspondence", In Proc. of the 39th Annual Conference on Neural Information Processing Systems, NeurIPS'25, San Diego, CA, USA, December 2025. <b><i>(NeurIPS Spotlight, 3% acceptance rate)</i></b></li><br />
 
@@ -235,17 +236,17 @@
 
                 <li><b>Feng Jiang</b>, Yuzhi Guo, Hehuan Ma, Saiyang Na, Weizhi An, Bing Song, Yi Han, Jean Gao, Tao Wang and Junzhou Huang, <a href="https://dl.acm.org/doi/10.1145/3698587.3701389" target="_blank">"AlphaEpi: Enhancing B Cell Epitope Prediction with AlphaFold 3"</a>, In Proc. of the 15th ACM Conference on Bioinformatics, Computational Biology, and Health Informatics, ACM BCB'24, Shenzhen, China, November 2024.</li><br />
 
-                <li><b>Feng Jiang</b>, Yuzhi Guo, Hehuan Ma, Saiyang Na, Wenliang Zhong, Yi Han, Tao Wang and Junzhou Huang, <a href="https://academic.oup.com/bib/article/25/4/bbae343/7713742" target="_blank">"GTE: A Graph Learning Framework for Prediction of T-Cell Receptors and Epitopes Binding Specificity"</a>, Briefings in Bioinformatics, Volume 25, Issue 4, July 2024.</li><br />
+                <li><b>Feng Jiang</b>, Yuzhi Guo, Hehuan Ma, Saiyang Na, Wenliang Zhong, Yi Han, Tao Wang, Junzhou Huang, <a href="https://academic.oup.com/bib/article/25/4/bbae343/7713742" target="_blank">"GTE: A Graph Learning Framework for Prediction of T-Cell Receptors and Epitopes Binding Specificity"</a>, Briefings in Bioinformatics, Volume 25, Issue 4, July 2024.</li><br />
 
                 <li>Wenliang Zhong, Rob Barton, Weizhi An, <b>Feng Jiang</b>, Hehuan Ma, Yuzhi Guo, Abhishek Dan, Shioulin Sam, Karim Bouyarmane and Junzhou Huang, "Zero-Shot Composed Image Retrieval via Dual-Stream Instruction-Aware Distillation", In Proc. of the 26th IEEE/CVF International Conference on Computer Vision, ICCV'25, Honolulu, Hawaii, USA, October 2025.</li><br />
 
-                <li>Miao, Y., Guo, Y., Ma, H., Yan, J., <b>Jiang, F.</b>, Liao, R., & Huang, J., "GoBERT: Gene Ontology Graph Informed BERT for Universal Gene Function Prediction", In Proceedings of the AAAI Conference on Artificial Intelligence, Vol. 39, No. 1, pp. 622-630, April 2025.</li><br />
+                <li>Miao, Y., Guo, Y., Ma, H., Yan, J., <b>Jiang, F</b>., Liao, R., & Huang, J. (2025, April). GoBERT: Gene Ontology Graph Informed BERT for Universal Gene Function Prediction. In Proceedings of the AAAI Conference on Artificial Intelligence (Vol. 39, No. 1, pp. 622-630).</li><br />
                 
                 <li>Weizhi An, Wenliang Zhong, <b>Feng Jiang</b>, Hehuan Ma and Junzhou Huang, <a href="https://eccv.ecva.net/virtual/2024/poster/2692" target="_blank">"Causal Subgraphs and Information Bottlenecks: Redefining OOD Robustness in Graph Neural Networks"</a>, In Proc. of the 18th European Conference on Computer Vision, ECCV'24, Milan, Italy, October 2024.</li><br />
                 
-                <li>Hehuan Ma, <b>Feng Jiang</b>, Yuzhi Guo and Junzhou Huang, <a href="https://dl.acm.org/doi/10.1145/3535508.3545998" target="_blank">"Towards Robust Self-training for Molecular Biology Prediction Tasks"</a>, Journal of Computational Biology, Volume 31, Issue 3, pp. 213-228, March 2024.</li><br />
+                <li>Hehuan Ma, <b>Feng Jiang</b>, Yuzhi Guo and Junzhou Huang, "Towards Robust Self-training for Molecular Biology Prediction Tasks", Journal of Computational Biology, Volume 31, Issue 3, pp. 213-228, March 2024.</li><br />
                 
-                <li>Saiyang Na, Yuzhi Guo, <b>Feng Jiang</b>, Hehuan Ma, Jean Gao and Junzhou Huang, <a href="https://arxiv.org/abs/2401.13220" target="_blank">"Segment Any Cell: A SAM-based Auto-prompting Fine-tuning Framework for Nuclei Segmentation"</a>, IEEE Transactions on Neural Networks and Learning Systems, <i>To Appear</i>.</li><br />
+                <li>Saiyang Na, Yuzhi Guo, <b>Feng Jiang</b>, Hehuan Ma, Jean Gao and Junzhou Huang, "Segment Any Cell: A SAM-based Auto-prompting Fine-tuning Framework for Nuclei Segmentation", IEEE Transactions on Neural Networks and Learning Systems, <i>To Appear</i>.</li><br />
                 
                 <li>Hehuan Ma, <b>Feng Jiang</b>, Yu Rong, Yuzhi Guo and Junzhou Huang, <a href="https://dl.acm.org/doi/abs/10.1145/3535508.3545998" target="_blank">"Robust Self-training Strategy for Various Molecular Biology Prediction Tasks"</a>, In Proc. of the 13th ACM International Conference on Bioinformatics, Computational Biology and Health Informatics, ACM BCB'22, Chicago, Illinois, USA, August 2022.</li>
             </ol>
@@ -272,15 +273,38 @@
             <br />
             </section>
 
+            <section id="teaching">
+            <h4>Teaching Experience</h4>
+            <ul class="teaching-list">
+                <li>2248-CSE-6324-980-ADV TOPS SOFTWARE ENGINEERING <i>Fall 2024</i></li>
+                <li>2245-CSE-3314-002-PROFESSIONAL PRACTICES <i>Summer 2024</i></li>
+                <li>2242-CSE-6324-001-ADV TOPS SOFTWARE ENGINEERING <i>Spring 2024</i></li>
+                <li>2238-CSE-6324-980-ADV TOPS SOFTWARE ENGINEERING <i>Fall 2023</i></li>
+                <li>2232-CSE-6324-001-ADV TOPS SOFTWARE ENGINEERING <i>Spring 2023</i></li>
+                <li>2228-CSE-6324-980-ADV TOPS SOFTWARE ENGINEERING <i>Fall 2022</i></li>
+                <li>2228-CSE-5325-003-SFWR ENG II: MGMT, MAIN, & QA <i>Fall 2022</i></li>
+            </ul>
+            <br />
+            </section>
+
+            <section id="honors">
+            <h4>Honors</h4>
+            <ul class="contentItem">
+                <li>John S. Schuchman Outstanding Doctoral Student Award, UTA (April 2023)</li>
+            </ul>
+            <br />
+            </section>
+
             <section id="research_experience">
             <h4>Research Experience</h4>
+            
             <p class="contentItem">
             <b>(2024.12-Now) Advanced Multimodal Alignment for Molecular Representation Learning</b>
             <ul>
                 <li>Proposed a volume-based alignment approach (TRIDENT) by transforming GRAM (Gramian) matrices derived from multimodal representations into volumetric features, enabling more effective cross-modal correspondence learning and achieving superior performance on protein-text retrieval tasks. <i>Accepted to NeurIPS'25 as Spotlight (3% acceptance rate)</i>.</li>
                 
                 <li>Developed novel multimodal alignment techniques to improve drug-target interaction (DTI) prediction by effectively integrating molecular graphs and protein sequences. <i>Manuscript submitted to ICLR'26</i>.</li>
-
+                
                 <li>Designed a disentangled multimodal alignment framework that separates modality-specific and modality-invariant features, enhancing model interpretability and generalization on downstream molecular property prediction tasks.</li>
             </ul>
             </p>
@@ -327,34 +351,17 @@
             <br />
             </section>
 
-            <section id="teaching">
-            <h4>Teaching Experience</h4>
-            <ul class="teaching-list">
-                <li>2248-CSE-6324-980-ADV TOPS SOFTWARE ENGINEERING <i>Fall 2024</i></li>
-                <li>2245-CSE-3314-002-PROFESSIONAL PRACTICES <i>Summer 2024</i></li>
-                <li>2242-CSE-6324-001-ADV TOPS SOFTWARE ENGINEERING <i>Spring 2024</i></li>
-                <li>2238-CSE-6324-980-ADV TOPS SOFTWARE ENGINEERING <i>Fall 2023</i></li>
-                <li>2232-CSE-6324-001-ADV TOPS SOFTWARE ENGINEERING <i>Spring 2023</i></li>
-                <li>2228-CSE-6324-980-ADV TOPS SOFTWARE ENGINEERING <i>Fall 2022</i></li>
-                <li>2228-CSE-5325-003-SFWR ENG II: MGMT, MAIN, & QA <i>Fall 2022</i></li>
-            </ul>
-            <br />
-            </section>
-
-            <section id="honors">
-            <h4>Honors</h4>
-            <ul class="contentItem">
-                <li>John S. Schuchman Outstanding Doctoral Student Award, UTA (April 2023)</li>
-            </ul>
-            <br />
-            </section>
-
             <div class="contentItem">
-                *Last updated on December 2024.
+                *Last updated on Nov 2024.
                 <b></b>
                 <b></b>
             </div>
         </div>
     </div>
+
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap-scrollspy.js"></script>
+        <script src="js/bootstrap.js"></script>
+
     </body>
 </html>
